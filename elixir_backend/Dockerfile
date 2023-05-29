@@ -6,15 +6,14 @@ WORKDIR /usr/src/app
 
 COPY . . 
 
-RUN mix local.rebar --force
-
 RUN mix local.hex --force
+
+RUN mix local.rebar --force
 
 RUN mix deps.get
 
 
 EXPOSE 7777
-EXPOSE 7778
 
 
 CMD ["mix", "run", "--no-halt"]

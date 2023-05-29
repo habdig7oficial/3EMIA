@@ -1,4 +1,4 @@
-#docker build -t ac-node-front . && docker run -p 7778:7778 ac-node-front
+# docker build -t ac-node-front . && docker run -p 7778:7778 ac-node-front
 
 FROM node:latest 
 

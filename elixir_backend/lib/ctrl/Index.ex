@@ -10,7 +10,9 @@ defmodule App.Ctrl.Index do
 
     conn = %{conn | resp_headers: headers }
 
-    response = %{:Foo => :Bar}
+    response = [%{:Foo => :Bar}, %{:Foo => :Baz}]
+
+    
     send_resp(conn, 200, Jason.encode!(response))
   end
 end
