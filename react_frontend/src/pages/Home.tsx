@@ -4,25 +4,18 @@ import Navbar from "../components/NavBar";
 import Card from "../components/Card";
 
 import type api from "../interfaces/api";
+import search from "../components/Fetchapi";
+import Teste from "../components/Teste";
 
 export default function Home() {
   let [api, Setapi] = useState<Array<api>>([]);
 
   useEffect(function () {
-    async function search() {
-      const res = await fetch(`http://localhost:7777/`);
-
-      const data = await res.json();
-
-      console.log(data);
-
-      Setapi(data);
-    }
-    search();
+    search(Setapi);
   });
 
   let cards: Array<JSX.Element> = [];
-  for (let i = 0; i < api.length; i++) {
+  for (let i = 0; i < api.length && i < 5; i++) {
     cards.push(<Card key={i} title={api[i].Foo} subtitle="World" img="" />);
   }
 
