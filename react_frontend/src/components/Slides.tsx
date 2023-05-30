@@ -18,7 +18,12 @@ export default function Slide({
   for (let i = 0; i < title.length; i++) {
     cards.push(
       <Carousel.Item key={i}>
-        <img height={875} className="d-block w-100" src={images[i]} alt={alts[i]} />
+        <img
+          height={875}
+          className="d-block w-100"
+          src={images[i]}
+          alt={alts[i]}
+        />
         <Carousel.Caption
           className=" d-flex flex-column justify-content-center align-items-center"
           style={{ top: 0 }}
@@ -34,9 +39,9 @@ export default function Slide({
 
   return (
     <>
-        <div>
-         <Carousel>{cards}</Carousel>
-        </div>
+      <div>
+        <Carousel>{cards}</Carousel>
+      </div>
     </>
   );
 }

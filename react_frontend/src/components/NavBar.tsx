@@ -14,8 +14,7 @@ export default function NavMenu() {
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Container>
-        <div className="mx-5 d-flex flex-row align-items-center justify-content-center navbar-expand-lg">
+        <div className="mx-5 d-lg-flex align-items-center justify-content-center navbar-expand-lg">
           <Navbar.Brand href="/">
             <img
               className="logo bg-light boder-radius rounded-circle me-3"
@@ -24,12 +23,12 @@ export default function NavMenu() {
             />
             Best Peneu
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse className="flex-wrap" id="responsive-navbar-nav">
+          <Navbar.Toggle className="me-4" style={{right: 0, position: "fixed"}} aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse>
             <Nav className="d-flex flex-row align-items-center justify-content-center">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/contato">Contato</Nav.Link>
-              <Nav.Link href="/sobre">Sobre</Nav.Link>
+              <Nav.Link className="px-1" href="/">Home</Nav.Link>
+              <Nav.Link className="px-1" href="/contato">Contato</Nav.Link>
+              <Nav.Link className="px-1" href="/sobre">Sobre</Nav.Link>
             </Nav>
 
             <div className="ms-2">
@@ -46,7 +45,6 @@ export default function NavMenu() {
             </div>
           </Navbar.Collapse>
         </div>
-        </Container>
       </Navbar>
 
       {show == true? (<Modal changeState={SetShow} search={search}></Modal>): (<></>)}
