@@ -16,26 +16,32 @@ export default function Home() {
 
   let cards: Array<JSX.Element> = [];
   for (let i = 0; i < api.length && i < 5; i++) {
-    cards.push(<Card key={i} title={api[i].Foo} subtitle="World" img="" />);
+    cards.push(<Card key={i} title={api[i].Nome} subtitle={api[i].Descricao} img={api[i].Imagem} preco={api[i].Preco} />);
   }
 
   return (
     <>
       <Navbar />
       <Slide
-        title={[`Os Melhores Pneus`, `Para Todos os veículos`]}
+        title={[
+          `Os Melhores Pneus`,
+          `Para Todos os veículos`,
+          `Com a confinça que você procura`,
+        ]}
         subtitle={[
           `Pneus Especialmente Selecionados pra Você`,
           `De Carros até Tratores`,
+          `Só Trabalhamos com as Melhores Marcas`
         ]}
         alts={[`Rodas`]}
         images={[
           `https://images.pexels.com/photos/244553/pexels-photo-244553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`,
           `https://images.pexels.com/photos/2254093/pexels-photo-2254093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`,
+          `https://images.pexels.com/photos/3806252/pexels-photo-3806252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`,
         ]}
       />
 
-      <div className="d-flex flex-row align-items-center justify-content-center">
+      <div className="d-flex flex-row align-items-top justify-content-center my-5 flex-wrap">
         {api.length != 0 ? (
           cards
         ) : (

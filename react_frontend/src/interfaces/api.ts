@@ -1,3 +1,6 @@
 export default interface api {
-  Foo: string;
+  Nome: string;
+  Descricao: string;
+  Imagem: string;
+  Preco: number
 }
