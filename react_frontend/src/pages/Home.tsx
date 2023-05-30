@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import Slide from "../components/Slides";
 import Navbar from "../components/NavBar";
 import Card from "../components/Card";
+import Footer from "../components/Footer";
 
 import type api from "../interfaces/api";
 import search from "../components/Fetchapi";
-import Teste from "../components/Teste";
 
 export default function Home() {
   let [api, Setapi] = useState<Array<api>>([]);
@@ -23,11 +23,15 @@ export default function Home() {
     <>
       <Navbar />
       <Slide
-        title={[`Os Melhores Pneus`]}
-        subtitle={[`Pneus Especialmente Selecionados pra Você`]}
+        title={[`Os Melhores Pneus`, `Para Todos os veículos`]}
+        subtitle={[
+          `Pneus Especialmente Selecionados pra Você`,
+          `De Carros até Tratores`,
+        ]}
         alts={[`Rodas`]}
         images={[
           `https://images.pexels.com/photos/244553/pexels-photo-244553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`,
+          `https://images.pexels.com/photos/2254093/pexels-photo-2254093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`,
         ]}
       />
 
@@ -40,6 +44,8 @@ export default function Home() {
           </h4>
         )}
       </div>
+
+      <Footer />
     </>
   );
 }

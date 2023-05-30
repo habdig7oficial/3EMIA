@@ -11,3 +11,11 @@ img {
 input {
   min-width: 5rem;
 }
+
+::selection {
+  @extend .text-bg-warning;
+}
+
+a {
+  @extend .text-info;
+}
